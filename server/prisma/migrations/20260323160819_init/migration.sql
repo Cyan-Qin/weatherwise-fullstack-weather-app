@@ -1,0 +1,31 @@
+-- CreateTable
+CREATE TABLE "WeatherRecord" (
+    "id" SERIAL NOT NULL,
+    "rawInput" TEXT NOT NULL,
+    "queryType" TEXT NOT NULL,
+    "locationName" TEXT NOT NULL,
+    "country" TEXT,
+    "latitude" DOUBLE PRECISION NOT NULL,
+    "longitude" DOUBLE PRECISION NOT NULL,
+    "startDate" TIMESTAMP(3),
+    "endDate" TIMESTAMP(3),
+    "currentTemp" DOUBLE PRECISION,
+    "feelsLike" DOUBLE PRECISION,
+    "tempMin" DOUBLE PRECISION,
+    "tempMax" DOUBLE PRECISION,
+    "weatherMain" TEXT,
+    "weatherDescription" TEXT,
+    "humidity" INTEGER,
+    "windSpeed" DOUBLE PRECISION,
+    "visibility" INTEGER,
+    "sunrise" TIMESTAMP(3),
+    "sunset" TIMESTAMP(3),
+    "adviceJson" TEXT,
+    "forecastJson" TEXT,
+    "note" TEXT,
+    "tag" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "WeatherRecord_pkey" PRIMARY KEY ("id")
+);
